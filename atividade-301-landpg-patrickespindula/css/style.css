@@ -1,0 +1,738 @@
+/* ==================================================
+   LANDING PAGE EDUCACÃO
+   Paleta: verde #4CAF50 / #2E7D32 / #1B5E20,
+           laranja #FF9800, creme #FFF8E7
+   Fontes: Poppins (títulos) e Nunito Sans (textos)
+   ================================================== */
+
+/* 1. Configurações gerais */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --verde: #4CAF50;
+    --verde-medio: #2E7D32;
+    --verde-escuro: #1B5E20;
+    --laranja: #FF9800;
+    --laranja-escuro: #F57C00;
+    --creme: #FFF8E7;
+    --verde-claro: #EEF4E8;
+    --texto: #3a3f3a;
+    --texto-suave: #5f665f;
+    --titulo: "Poppins", "Segoe UI", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    margin: 0;
+    font-family: "Nunito Sans", "Segoe UI", Arial, sans-serif;
+    color: var(--texto);
+    background-color: white;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+a {
+    color: var(--verde-medio);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: var(--titulo);
+    color: var(--verde-escuro);
+}
+
+/* 2. Contêiner e seções */
+.section {
+    width: 90%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 5rem 0;
+}
+
+.section-heading {
+    max-width: 640px;
+    margin: 0 auto 2.75rem;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin: 0.25rem 0 0.5rem;
+    font-family: var(--titulo);
+    font-size: 2.25rem;
+    line-height: 1.2;
+}
+
+.section-heading p {
+    color: var(--texto-suave);
+    margin: 0;
+}
+
+.section-heading .eyebrow {
+    color: var(--verde-medio);
+}
+
+/* 3. Cabeçalho e navegação */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.75rem max(5%, calc((100% - 1180px) / 2));
+    background-color: white;
+    border-bottom: 1px solid #ececec;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.35rem;
+    font-weight: 800;
+    font-family: var(--titulo);
+    color: var(--verde-medio);
+}
+
+.logo-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+    border-radius: 50%;
+    background-color: var(--verde-claro);
+}
+
+.logo-text {
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.logo-text span,
+.accent {
+    color: var(--laranja);
+}
+
+.logo-text small,
+.footer-brand small {
+    display: block;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--texto-suave);
+}
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.main-nav a {
+    display: block;
+    padding: 0.4rem 0.6rem;
+    font-family: var(--titulo);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--texto);
+    border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover {
+    color: var(--laranja-escuro);
+    border-bottom-color: var(--laranja);
+}
+
+.header-cta {
+    padding: 0.55rem 1.1rem;
+    font-size: 0.85rem;
+}
+
+/* 4. Banner principal */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 3.5rem max(5%, calc((100% - 1180px) / 2));
+    background: linear-gradient(120deg, var(--creme) 40%, var(--verde-claro));
+}
+
+.hero-content {
+    width: 50%;
+    max-width: 560px;
+}
+
+.eyebrow {
+    margin: 0;
+    color: var(--verde-medio);
+    font-family: var(--titulo);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.eyebrow-pill {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    color: white;
+    background-color: var(--verde-medio);
+    border-radius: 999px;
+    font-size: 0.7rem;
+}
+
+.hero h1 {
+    margin: 1rem 0;
+    font-family: var(--titulo);
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 800;
+    line-height: 1.12;
+}
+
+.hero h1 span {
+    color: var(--laranja);
+}
+
+.hero-description {
+    margin-bottom: 1.75rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.hero-image {
+    width: 45%;
+    max-width: 510px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 255px 255px 20px 20px;
+    box-shadow: 0 18px 40px rgba(46, 125, 50, 0.18);
+}
+
+/* 5. Botões e links de ação */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.6rem;
+    border: none;
+    border-radius: 999px;
+    font-family: var(--titulo);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.button-primary {
+    color: white;
+    background-color: var(--laranja);
+}
+
+.button-primary:hover {
+    background-color: var(--laranja-escuro);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(245, 124, 0, 0.3);
+}
+
+.button-secondary {
+    color: white;
+    background-color: var(--verde-medio);
+}
+
+.button-secondary:hover {
+    background-color: var(--verde-escuro);
+    transform: translateY(-2px);
+}
+
+.button:focus-visible,
+.text-link:focus-visible,
+.main-nav a:focus-visible {
+    outline: 3px solid var(--verde-escuro);
+    outline-offset: 3px;
+}
+
+.text-link {
+    color: var(--verde-medio);
+    font-family: var(--titulo);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.text-link span {
+    color: var(--laranja);
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+/* 6. Cards de serviços */
+.services {
+    max-width: none;
+    width: 100%;
+    padding-left: max(5%, calc((100% - 1180px) / 2));
+    padding-right: max(5%, calc((100% - 1180px) / 2));
+    background-color: var(--creme);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.service-card {
+    overflow: hidden;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.service-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    font-size: 1.05rem;
+}
+
+.card-content p {
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+}
+
+/* 7. Seção sobre */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.about-image,
+.about-content {
+    width: 50%;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.about-content h2 {
+    margin: 0.25rem 0 1rem;
+    font-size: 2.1rem;
+    line-height: 1.2;
+}
+
+.about-content p {
+    color: var(--texto-suave);
+}
+
+.check-list {
+    margin: 1.25rem 0 1.75rem;
+}
+
+.check-list li {
+    margin-bottom: 0.4rem;
+    font-family: var(--titulo);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--verde-escuro);
+}
+
+.check-list li::before {
+    content: "✓";
+    margin-right: 0.4rem;
+    color: var(--verde-medio);
+}
+
+/* 8. Diferenciais */
+.benefits {
+    background-color: var(--verde-claro);
+}
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.benefit-card h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1rem;
+}
+
+.benefit-card p {
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: 0.92rem;
+}
+
+.benefit-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    font-size: 1.1rem;
+    color: white;
+    background-color: var(--verde-medio);
+    border-radius: 50%;
+}
+
+/* 9. Depoimentos */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+}
+
+.testimonial-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: white;
+    border: 1px solid #e6e6e6;
+    border-left: 4px solid var(--verde);
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.avatar {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    color: white;
+    background-color: var(--verde-medio);
+    border-radius: 50%;
+    font-family: var(--titulo);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.testimonial-card blockquote {
+    margin: 0 0 0.75rem;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.testimonial-author {
+    margin: 0;
+    font-family: var(--titulo);
+    font-weight: 700;
+    color: var(--verde-escuro);
+}
+
+.testimonial-role {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+}
+
+.fictional-note {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+}
+
+/* 10. Contato e formulário */
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 3rem;
+    align-items: start;
+    margin-bottom: 4rem;
+    padding: 3rem;
+    background-color: var(--creme);
+    border-radius: 24px;
+}
+
+.contact-content h2 {
+    margin: 0.25rem 0 1rem;
+    font-size: 2.2rem;
+}
+
+.contact-content p {
+    color: var(--texto-suave);
+}
+
+.contact-list {
+    margin-top: 1.5rem;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--verde-escuro);
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: white;
+    background-color: var(--verde-medio);
+    border-radius: 50%;
+    font-size: 0.85rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.75rem;
+    background-color: white;
+    border: 1px solid #ececec;
+    border-radius: 16px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-family: var(--titulo);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--verde-escuro);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid #d5d5d5;
+    border-radius: 10px;
+    font: inherit;
+    background-color: white;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 2px solid rgba(76, 175, 80, 0.35);
+    border-color: var(--verde-medio);
+}
+
+.contact-form .button {
+    width: 100%;
+}
+
+.form-note {
+    margin: 0;
+    font-size: 0.78rem;
+    color: var(--texto-suave);
+}
+
+/* 11. Rodapé */
+.site-footer {
+    padding: 2rem 5%;
+    text-align: center;
+    color: white;
+    background: linear-gradient(90deg, var(--verde-escuro), #14502a);
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--titulo);
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.1;
+    text-align: left;
+}
+
+.footer-brand .logo-icon {
+    background-color: white;
+}
+
+.footer-brand small {
+    color: #d7ead8;
+}
+
+.footer-copy {
+    font-size: 0.85rem;
+    color: #d7ead8;
+}
+
+/* 12. Responsividade */
+@media (max-width: 900px) {
+    .site-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        position: static;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.25rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        text-align: center;
+    }
+
+    .hero-content,
+    .hero-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        height: 340px;
+    }
+
+    .service-grid,
+    .benefit-grid,
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about,
+    .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-image,
+    .about-content {
+        width: 100%;
+    }
+
+    .about-image img {
+        height: 280px;
+    }
+
+    .contact {
+        width: 92%;
+        padding: 1.5rem;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .section {
+        padding: 3.5rem 0;
+    }
+
+    .section-heading h2 {
+        font-size: 1.8rem;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-brand {
+        text-align: left;
+    }
+}
+
+@media (max-width: 520px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-card {
+        flex-direction: column;
+    }
+}
